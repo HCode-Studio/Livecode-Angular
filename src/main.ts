@@ -1,0 +1,17 @@
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/components/app.component';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import { LOCALE_ID } from '@angular/core';
+
+registerLocaleData(localeFr);
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' }
+  ]
+});
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+  // git@github.com:HCode-Studio/Livecode-Angular.git
