@@ -14,4 +14,3 @@ bootstrapApplication(AppComponent, {
 });
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
-  // git@github.com:HCode-Studio/Livecode-Angular.git
